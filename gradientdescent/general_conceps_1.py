@@ -45,4 +45,16 @@ p.show()
 # 1. Initizalize random guess of minimum
 # 2. Loop over training iterations (for loop)
 #   2.1 Compute derivative at guess min
-#   2.2 Updated guess min is itself minus derivative scaled by learning rate
+#   2.2 Updated guess min is itself minus derivative scaled by learning rate.
+
+# Gradient descent is guaranteed to reduce the error. 
+# But it is not guaranteed to find the correct solution.
+# Gradient descent can go wrong if parameters are not set right for the particular error
+# landscape. ( error landscape are impossible to visualize in 2D)
+
+# Tip: 
+# When model performance is good, do not worry about Local Minima.
+# Solution 1 (just in case there is an existing problem in Local Minima):
+#   Re- train the model many times using different random weights and pick the model 
+#   that does best.
+#   Or, increase the dimensionality of the model to have fewer local minima.
